@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "basePackageValues": {
+      "description": "An object or function customizing the outputted package.json",
+      "oneOf": [
+        { "type": "object", "additionalProperties": true },
+        {
+          "instanceof": "Function",
+          "tsType": "(packageJson: object, compilation: import('webpack/lib/Compilation')) => object"
+        }
+      ]
+    },
+    "outputPath": {
+      "description": "A filesystem path where the generated package.json will be placed",
+      "type": "string"
+    }
+  }
+}
