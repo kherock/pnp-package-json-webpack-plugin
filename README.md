@@ -1,3 +1,8 @@
+[![npm][npm]][npm-url]
+[![node][node]][node-url]
+[![deps][deps]][deps-url]
+[![downloads][downloads]][downloads-url]
+
 <div align="center">
   <a href="https://github.com/webpack/webpack">
     <img width="200" height="200" src="https://webpack.js.org/assets/icon-square-big.svg">
@@ -125,3 +130,18 @@ module.exports = {
   ],
 };
 ```
+
+[npm]: https://img.shields.io/npm/v/pnp-package-json-webpack-plugin.svg
+[npm-url]: https://npmjs.com/package/pnp-package-json-webpack-plugin
+
+[node]: https://img.shields.io/node/v/pnp-package-json-webpack-plugin.svg
+[node-url]: https://nodejs.org
+
+[deps]: https://david-dm.org/kherock/pnp-package-json-webpack-plugin.svg
+[deps-url]: https://david-dm.org/kherock/pnp-package-json-webpack-plugin
+
+[tests]: http://img.shields.io/travis/kherock/pnp-package-json-webpack-plugin.svg
+[tests-url]: https://travis-ci.org/kherock/pnp-package-json-webpack-plugin
+
+[downloads]: https://img.shields.io/npm/dt/pnp-package-json-webpack-plugin.svg
+[downloads-url]: https://npmjs.com/package/pnp-package-json-webpack-plugin
