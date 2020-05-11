@@ -64,20 +64,21 @@ class PnpPackageJsonPlugin {
     compiler.hooks.emit.tapAsync(
       PnpPackageJsonPlugin.name,
       (compilation, callback) => {
-        const asset = JSON.stringify(
-          Object.assign(
-            {},
-            this.basePackageValues instanceof Function
-              ? this.basePackageValues(compilation)
-              : this.basePackageValues,
-            {
-              dependencies,
-              devDependencies: undefined,
-            },
-          ),
-          null,
-          2,
-        );
+        const asset =
+          JSON.stringify(
+            Object.assign(
+              {},
+              this.basePackageValues instanceof Function
+                ? this.basePackageValues(compilation)
+                : this.basePackageValues,
+              {
+                dependencies,
+                devDependencies: undefined,
+              },
+            ),
+            null,
+            2,
+          ) + '\n';
         compilation.assets['package.json'] = {
           source: () => asset,
           size: () => asset.length,
