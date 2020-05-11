@@ -79,7 +79,7 @@ class PnpPackageJsonPlugin {
             null,
             2,
           ) + '\n';
-        compilation.assets['package.json'] = {
+        compilation.assets[this.outputPath] = {
           source: () => asset,
           size: () => asset.length,
         };
