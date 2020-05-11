@@ -49,9 +49,10 @@ class PnpPackageJsonPlugin {
                   if (reference.startsWith('workspace:')) {
                     continue;
                   }
-                  dependencies[name] = reference.startsWith('npm:')
-                    ? reference.slice('npm:'.length)
-                    : reference;
+                  dependencies[name] = reference.replace(
+                    /(?<=^|#)(npm|commit):/g,
+                    '',
+                  );
                 } catch {}
               }
             }
