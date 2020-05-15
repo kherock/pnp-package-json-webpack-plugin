@@ -50,7 +50,7 @@ class PnpPackageJsonPlugin {
                     continue;
                   }
                   dependencies[name] = reference.replace(
-                    /(?<=^|#)(npm|commit):/g,
+                    /(^virtual:\w+#)?(?<=^|#)(npm|commit):/g,
                     '',
                   );
                 } catch {}
