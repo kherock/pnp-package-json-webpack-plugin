@@ -41,7 +41,7 @@ class PnpPackageJsonPlugin {
                   const resolution = pnp.resolveToUnqualified(
                     module.userRequest,
                     module.issuer.context,
-                    { considerBuiltins: false },
+                    { considerBuiltins: compiler.options.target === 'node' },
                   );
                   const { name, reference } = pnp.findPackageLocator(
                     pnp.resolveUnqualified(resolution),
