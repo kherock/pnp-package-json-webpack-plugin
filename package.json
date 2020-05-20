@@ -1,6 +1,6 @@
 {
   "name": "pnp-package-json-webpack-plugin",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A webpack plugin to generate package.json file with external modules as dependencies",
   "main": "index.js",
   "repository": "https://github.com/kherock/pnp-package-json-webpack-plugin",
